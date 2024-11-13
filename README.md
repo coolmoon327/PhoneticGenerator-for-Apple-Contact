@@ -7,7 +7,7 @@ PhoneticGenerator 是一个 Python 脚本，旨在从 Apple 的 VCF 联系人文
 
 ## 功能
 
-- 给中文通讯录增加拼英标注。
+- 给中文通讯录增加拼音标注。
 - 在英文系统下，允许 macOS/iOS 对中文名片进行排序。
 - 使用前瞻版 Apple Intelligence 的用户只能配置 English Siri，本项目允许 Siri 正确访问并识别中文通讯录（测试中）。
 
@@ -97,6 +97,21 @@ END:VCARD
 编码问题：确保 VCF 文件使用 UTF-8 编码，否则可能导致中文字符无法正确处理。
 
 拼音转换准确性：该脚本依赖于[原项目](https://github.com/SweenEy1130/iPhoneContactSort)中编写的 pinyin 库来生成拼音，拼音的准确性可能会受到库本身支持的影响。
+
+## 如何修改部分文字的拼音
+
+某些多音字对应的拼音有多个，可以通过修改 `word.data` 文件来自定义选择：
+
+1. 在网络上搜索目标多音字的 `UTF-8` 编码，如“茜”字对应“U+831C”；
+2. 在 `word.data` 文件中搜索上述编码中的 16 进制数字，如“831C”，找到：
+```
+831C    QIAN4 QIAN1 XI1
+```
+3. 修改后面拼音的顺序，把目标拼音改到第一个，如修改为“xi”：
+```
+831C    XI1 QIAN4 QIAN1
+```
+4. 保存文件即可
 
 ## Author / Collaborator
 
