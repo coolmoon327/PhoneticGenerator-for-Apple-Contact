@@ -72,7 +72,7 @@ TEL;type=HOME;type=VOICE;type=pref:9110
 END:VCARD
 ```
 
-## 步骤 3：导入更新后的 VCF 文件
+### 步骤 3：导入更新后的 VCF 文件
 
 **首先务必备份现有通讯录！！！**
 
