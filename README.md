@@ -1,4 +1,4 @@
-PhoneticGenerator for Apple Contact
+PhoneticGenerator for Apple Contacts
 =========
 
 > 本项目源于 [iPhoneContactSort](https://github.com/SweenEy1130/iPhoneContactSort)，在 python 3+ 下进行适配，修改部分 bug，并增加使用说明。
